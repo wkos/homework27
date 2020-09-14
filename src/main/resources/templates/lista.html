@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pl" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Lista wszystkich produktów</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+          integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
+          crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<h1 th:text="|Lista produktów|">Lista produktów</h1>
+<div th:replace="fragments::listOfTasks(${tasks})"></div>
+<!--<table class="table">-->
+<!--    <thead class="thead-dark">-->
+<!--    <tr>-->
+<!--        <th scope="col">Id</th>-->
+<!--        <th scope="col">Nazwa</th>-->
+<!--        <th scope="col">Opis</th>-->
+<!--        <th scope="col">Zrobione</th>-->
+<!--        <th scope="col">Początek</th>-->
+<!--        <th scope="col">Koniec</th>-->
+<!--    </tr>-->
+<!--    </thead>-->
+<!--    <tbody>-->
+<!--    <tr data-th-each="t: ${tasks}">-->
+<!--        <td data-th-text="${t.id}">Id</td>-->
+<!--        <td data-th-text="${t.name}">Zadanie</td>-->
+<!--        <td data-th-text="${t.description}">Opis</td>-->
+<!--        <td data-th-text="${t.isTaskDone()}">Zrobione</td>-->
+<!--        <td data-th-text="${t.startDate}">Początek</td>-->
+<!--        <td data-th-text="${t.deadline}">Koniec</td>-->
+<!--    </tr>-->
+<!--    </tbody>-->
+<!--</table>-->
+</body>
+</html>

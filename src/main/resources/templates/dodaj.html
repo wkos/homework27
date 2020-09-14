@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Dodawanie produktów</title>
+    <link rel="stylesheet"
+          href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+          integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
+          crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div th:replace="fragments::menu"></div>
+<form th:action="@{/dodaj}" th:object="${task}" method="post">
+    <div class="form-group">
+        <label for="name">Nazwa zadania</label>
+        <input type="text" th:field="*{name}" class="form-control" id="name" name="name">
+    </div>
+    <div class="form-group">
+        <label for="description">Opis zadania</label>
+        <input type="text" th:field="*{description}" class="form-control" id="description" name="description">
+    </div>
+<!--    <div class="custom-control custom-checkbox">-->
+<!--        <input type="checkbox" th:field="*{taskDone}" th:value="*{taskDone}" class="custom-control-input" id="done">-->
+<!--        <label class="custom-control-label" for="done">zrealizowane</label>-->
+<!--    </div>-->
+    <div class="form-group input-group date">
+        <label for="startdate" class="date">Data początkowa</label>
+        <input type="date" class="date form-control" th:field="*{startDate}" id="startdate" />
+    </div>
+    <div class="form-group input-group date">
+        <label for="deadline" class="date">Data końcowa</label>
+        <input type="date" class="date form-control" th:field="*{deadline}" id="deadline" />
+    </div>
+ <!--    <div class="form-group">-->
+<!--        <label for="category">Kategoria</label>-->
+<!--        <select id="category" class="form-control" name="category" required>-->
+<!--            <option value="GROCERIES">Art. spożywcze</option>-->
+<!--            <option value="HOUSEHOLD">Art. gosp. domowego</option>-->
+<!--            <option value="OTHER">Inne</option>-->
+<!--        </select>-->
+<!--    </div>-->
+    <div class="form-group">
+        <button type="submit" class="btn btn-primary">Dodaj</button>
+    </div>
+</form>
+<div th:replace="fragments::scripts"></div>
+</body>
+</html>
