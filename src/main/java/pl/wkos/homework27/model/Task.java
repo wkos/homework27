@@ -26,9 +26,10 @@ public class Task {
     @Column(nullable = false)
     private Date startDate;
 
-    @DateTimeFormat(iso = DateTimeFormat.ISO.DATE)
+//    @DateTimeFormat(iso = DateTimeFormat.ISO.DATE)
 
 //    @DateTimeFormat(pattern = "yyyy-MM-dd")
+    @Column(nullable = true)
     private Date deadline;
 
     public Task() {

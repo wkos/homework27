@@ -48,7 +48,7 @@
         </tr>
         </thead>
         <tbody>
-        <tr th:each="t: ${tasks}" th:style="${t.getTaskDone()} ? 'color: green' : 'color: red'">
+        <tr th:each="t: ${tasks}" th:style="${t.getDeadline() &lt; currentDate and t.taskDone == false} ? 'color: red' : 'color: green'">
             <td th:text="${t.id}">Id</td>
             <td th:text="${t.name}">Zadanie</td>
             <td th:text="${t.description}">Opis</td>
