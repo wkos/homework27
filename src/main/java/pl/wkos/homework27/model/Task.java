@@ -28,7 +28,7 @@ public class Task {
 
 //    @DateTimeFormat(iso = DateTimeFormat.ISO.DATE)
 
-//    @DateTimeFormat(pattern = "yyyy-MM-dd")
+//    @DateTimeFormat(pattern = "dd.MM.yyyy")
     @Column(nullable = true)
     private Date deadline;
 
